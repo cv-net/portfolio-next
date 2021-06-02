@@ -1,10 +1,17 @@
 ## Portfolio site
-- [ ] Deploy
-  - [ ] Next to Github Pages
+- [x] Deploy
+  - [Vercel](https://portfolio-five-pink.vercel.app)
 - [ ] Mobile-first CSS
+  - [ ] blog on it - document process
 - [ ] Weather data API
 - [ ] Add favicon
-- [ ] Plastic Bag Props
+- [ ] [Header on blog pages](https://www.youtube.com/watch?v=pY0vWYLDDco)
+- [ ] Miller columns
+- [ ] Mobile layout for blogs
+
+
+- [ ] **Plastic Bag Props**
+  - [ ] JSX Article in first column, Markdown in the second
   - [ ] [Tableau embeds in JSX](https://stackoverflow.com/questions/34424845/adding-script-tag-to-react-jsx)
   - [x] Turn into html for clickable divs and embeds and proper picture sizing
   - [x] Add links back (in article and in citations)
@@ -12,7 +19,7 @@
   - [ ] callout css
   - [ ] Github embed at top css and img
   
-## Portfolio Projects
+## more Portfolio Projects
 - [ ] Finish react journal timer
   - [x] Fix timer
   - [ ] add notes back

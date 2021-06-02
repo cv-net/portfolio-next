@@ -18,6 +18,5 @@ export default function Layout({title, keywords, description, children}) {
 Layout.defaultProps = {
     title: 'Khalil Abdellah | Portfolio',
     description: 'yooo',
-    keywords: 'web developer, bro'
-
+    keywords: 'web developer, react.js, python, accessibility, note-taking apps, productivity aid'
 }
