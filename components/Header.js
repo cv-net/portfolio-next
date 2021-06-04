@@ -64,20 +64,20 @@ export default function Header({url, temp}) {
     );
 }
 
-export async function getStaticProps() {
-    try {
-        const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Philadelphia&units=imperial&appid=${keys.openweatherdata}`);
-        let url = `https://openweathermap.org/img/w/${res.data.weather[0].icon}.png`;
-        let temp = parseInt(res.data.main.temp)
+// export async function getStaticProps() {
+//     try {
+//         const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Philadelphia&units=imperial&appid=${keys.openweatherdata}`);
+//         let url = `https://openweathermap.org/img/w/${res.data.weather[0].icon}.png`;
+//         let temp = parseInt(res.data.main.temp)
         
-        return {
-            props: {
-                url,
-                temp
-            },
-        }
+//         return {
+//             props: {
+//                 url,
+//                 temp
+//             },
+//         }
 
-    } catch (err) {
-        console.log(err);
-    }
-}
+//     } catch (err) {
+//         console.log(err);
+//     }
+// }
