@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css';
-import keys from '../keys';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { StaticRouter as Router, Route, Switch} from 'react-router-dom';
