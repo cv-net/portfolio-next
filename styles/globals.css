@@ -21,6 +21,11 @@ a {
     margin: auto;
 } */
 
+code {
+  color: red;
+  background-color: #CDCDEB;
+}
+
 #lede {
   font-size: 1.5em;
 }

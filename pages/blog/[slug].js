@@ -4,10 +4,11 @@ import path from 'path';
 import matter from 'gray-matter'; //for gray matter
 import Head from 'next/head';
 import marked from 'marked';
+import Layout from '../../components/Layout';
 
 const Post = ({ htmlString, data }) => {
     return (
-        <>
+        <Layout>
         <Head>
             <title>{data.title}</title>
             <meta title='description' content={data.description} />
@@ -15,7 +16,7 @@ const Post = ({ htmlString, data }) => {
         <h2>{data.title}</h2>
         <h4><italics>{data.date}</italics></h4>
         <div dangerouslySetInnerHTML={{ __html: htmlString }} />
-        </>
+        </Layout>
     );
 };
 

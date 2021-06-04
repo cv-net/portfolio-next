@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 const HeaderStyle = styled.div`
     display: flex;
-    flex-flow: column no-wrap;
+    flex-flow: row no-wrap;
     border-bottom: 2px solid #CDCDEB;
     a:link, a:visited, a:active {
         color: black;
@@ -48,9 +48,9 @@ export default function Header() {
                 <li><a href='https://google.com' target='_blank' rel="noreferrer">resume</a></li>
             </ul>
             <ul className='header-ul'>
-                <li>home</li>
+                <li><Link href='/'>home</Link></li>
                 <li>freq.ly used code</li>
-                <li>data journalism</li>
+                <li><Link href='/datajournalism'>data journalism</Link></li>
             </ul>
             <ul className='header-ul'>
                 <li>Site under construction..</li>

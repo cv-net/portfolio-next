@@ -9,6 +9,10 @@
 - [ ] Miller columns
 - [ ] Mobile layout for blogs
 
+- [ ] **Social Media posts page** 
+  - [ ] Indie-Life posts
+
+
 
 - [ ] **Plastic Bag Props**
   - [ ] JSX Article in first column, Markdown in the second
