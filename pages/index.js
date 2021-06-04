@@ -5,14 +5,9 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import fs from 'fs';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { StaticRouter as Router, Route, Switch} from 'react-router-dom';
 import Layout from '../components/Layout';
-// import twitter from './img/twitter.png';
-// import linkedin from './img/linkedin.png';
-// import github from './img/github.png';
-// import resume from './resume521.pdf';
-// import headerbg from './img/ibnalrabin.png';
-
+import Bio from '../components/Bio';
 
 
 const HomeStyle = styled.div`
@@ -27,14 +22,22 @@ const HomeStyle = styled.div`
     color: white;
     background-color: #CDCDCD;
   }
+  .blog {
+    padding: 1em;
+    background-color: black; !important
+    color: white;
+    background-image: url('/img/ibnalrabin.png')
+  }
 `
 
 export default function Home({slugs}) {
   return(
+    <Router>
     <Layout>    
       <HomeStyle>
-        <div className='nav'>
-          Blog posts:
+        <Bio />
+        <div className='blog' id='blog'>
+          Markdown blog posts:
           {slugs.map(slug => {
             return (
               <div key={slug}>
@@ -47,6 +50,7 @@ export default function Home({slugs}) {
         </div>
       </HomeStyle>
     </Layout>
+    </ Router>
   );
 }
 

@@ -27,7 +27,7 @@ const PlasticBag = styled.div`
         text-align: left;
     }
     h6 {
-            font-family: serif, 'Footlight MT Light';
+        font-family: serif, 'Footlight MT Light';
     }
     .paragraph {
         padding-bottom: 1em;
@@ -52,9 +52,9 @@ function PlasticBagProps() {
     return(
 <Layout>
     <PlasticBag>
-        <h4>Plastic Bag Propositions and Political Tricks</h4>
-        <h6>Tableau data visualizations and editorial project from First Python Notebook</h6>
-        <h6>by Khalil Abdellah</h6>
+        <h2>Plastic Bag Propositions and Political Tricks</h2>
+        <h4>Tableau data visualizations and editorial project from First Python Notebook</h4>
+        <h4>by Khalil Abdellah</h4>
         <p><a href='https://github.com/cv-net/plastic-bag-props' target='_blank' rel="noreferrer">Project GitHub</a> | <a href='https://public.tableau.com/profile/khalil6901#!/?newProfile=&activeTab=0'>My Tableau Profile</a></p>
         <hr/>
             <div className='paragraph'>
@@ -118,7 +118,7 @@ function PlasticBagProps() {
     It immediately stuck out that the same 5 contributors that supported Proposition 65, opposed Proposition 67. 
     This was because the two propositions were listed together as the result of a successful petition in California courts.
             </div>
-            <Image src='/img/plastic_bag_props/fig.1.jpg' layout='fill' alt='Figure 1'/>
+            <Image src='/img/plastic_bag_props/fig.1.jpg' width={400} height={500} alt='Figure 1'/>
             <p>Fig. 1, a screenshot from the Python notebook for this project. Available on Github after the jump.</p>
             <div className='paragraph APBApara'>
     These 5 companies contributed to the one committee sponsoring the proposition, the American Progressive Bag Alliance. Proposition 65's supporters were listed as opposition to Proposition 67.
@@ -126,7 +126,7 @@ function PlasticBagProps() {
     focus away from Proposition 67.            
             </div>
             {/* <Image src={figure7} className='APBA' alt='Logo for the American Progressive Bag Alliance'/> */}
-            <a href='https://public.tableau.com/views/Prop65sSupportingCommitteesandContributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'><Image src='/img/plastic_bag_props/fig.2.jpg' layout='fill' alt='Figure 2'/></a>
+            <a href='https://public.tableau.com/views/Prop65sSupportingCommitteesandContributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'><Image src='/img/plastic_bag_props/fig.2.jpg' width={400} height={500} alt='Figure 2'/></a>
             <p>Figure 2, available on <a href='https://public.tableau.com/views/Prop65sSupportingCommitteesandContributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'>Tableau Public.</a></p>
             <div className='paragraph'>
     Contributions supporting Prop. 65 averaged $99,311.60 (27 contributions) which is, on average, over 300x higher than those supporting Prop. 67.
@@ -151,7 +151,7 @@ function PlasticBagProps() {
     In spite of this, Proposition 67 had many small contributors, largely from California residents.
             </div>
             <h3>Prop. 67 - REFERENDUM TO OVERTURN BAN ON SINGLE-USE PLASTIC BAGS.</h3>
-            <a href='https://public.tableau.com/views/Prop67Contributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'><Image src='/img/plastic_bag_props/fig.3.jpg' layout='fill' alt='Figure 3'/></a>
+            <a href='https://public.tableau.com/views/Prop67Contributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'><Image src='/img/plastic_bag_props/fig.3.jpg' width={400} height={500} alt='Figure 3'/></a>
             <p>Figure 3, available on <a href='https://public.tableau.com/views/Prop67Contributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'>Tableau Public</a></p>
             <ul>
                 <li>
@@ -161,7 +161,7 @@ function PlasticBagProps() {
                     Average contribution of $286.17
                 </li>
             </ul>
-            <Image src='/img/plastic_bag_props/fig.4.jpg' layout='fill' alt='Figure 4'/>
+            <Image src='/img/plastic_bag_props/fig.4.jpg' width={400} height={500} alt='Figure 4'/>
             <p>
                 Figure 4, from <a href='https://github.com/mourtallah/CA-Ballot-Props' target='_blank' rel="noreferrer">Money in Politics : An Analysis of 2016 California Ballot Propositions Contributions 
                 by Serigne Mourtallah M'backe Faye, 2021</a> 
@@ -170,7 +170,7 @@ function PlasticBagProps() {
     When looking at all the California ballot propositions in 2016, Prop. 67 was on the higher end 
     with 6,000+ contributors, as opposed to Prop. 65's five contributors.
             </div>
-            <Image src='/img/plastic_bag_props/fig.5.jpg' layout='fill' alt='Figure 5'/>
+            <Image src='/img/plastic_bag_props/fig.5.jpg' width={400} height={500} alt='Figure 5'/>
             <p>Figure 5, a screenshot from the Python notebook for the project, available on Github.</p>
             <div className='paragraph'>
     Prop. 67 raised only about 2/3 of what Prop. 65 raised, which was largely done by the four plastics producers.
@@ -179,7 +179,7 @@ function PlasticBagProps() {
             <div className='paragraph'>
     We find the fine print of Proposition 65, something that makes a little more sense for a plastic bag company to support, on <a href='https://ballotpedia.org/California_Proposition_65,_Dedication_of_Revenue_from_Disposable_Bag_Sales_to_Wildlife_Conservation_Fund_(2016)' target='_blank' rel="noreferrer">Ballotpedia</a>.
             </div>
-            <Image src='/img/plastic_bag_props/fig.6.jpg' layout='fill' alt='Figure 6'/>
+            <Image src='/img/plastic_bag_props/fig.6.jpg' width={400} height={500} alt='Figure 6'/>
             <p>Figure 6, from Ballotpedia.</p>
             <div className='paragraph'>
     Prop. 65 would have only succeeded in its surface aims if it both props won, and 65 succeeded with a 
