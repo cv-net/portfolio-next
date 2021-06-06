@@ -16,6 +16,13 @@ const TableauStyle = styled.div`
     .tableauViz {
         display: none;
     }
+
+    @media (max-width: 416px) {
+        .tableauPlaceholder {
+            width: 100%;
+            height: 50%;
+        }
+    }
 `
 
 
@@ -56,7 +63,7 @@ export default function Bio() {
             <div className={styles.projectcard} >
                 <Link to='/datajournalism'><h3 className='serif'>Plastic Bag Props</h3></Link>
                 <p>
-                    Data visualization using Tableau and editorial. Data analysis using Python and Pandas.
+                    Data visualization using Tableau, with editorial. Data analysis using Python and Pandas. Click for article.
                 </p>
                 <Link to='/datajournalism' >
                     <TableauStyle>
