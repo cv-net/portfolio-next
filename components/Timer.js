@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import useInterval from '@use-it/interval';
-import Image from 'next/image';
 let minutes, seconds;
 
 function TimerInterface(props) {
@@ -66,8 +65,8 @@ function TimerInterface(props) {
     if (stop) {
         return(
             <div id='sessioncontrols'>
-                <Image className='sessioncontrol' src='/img/play.png' alt='play button' onClick={handlePlay} width={51} height={51} />
-                <Image className='sessioncontrol' src='/img/stopfalse.svg' alt='stop button' width={51} height={51} />
+                <img className='sessioncontrol' src='/img/play.png' alt='play button' onClick={handlePlay} />
+                <img className='sessioncontrol' src='/img/stopfalse.svg' alt='stop button' />
             </div>
 
             
@@ -75,15 +74,15 @@ function TimerInterface(props) {
     } else if (play) {
         return(
             <div id='sessioncontrols'>
-                <Image className='sessioncontrol' src='/img/pause.png' alt='pause button' onClick={handlePause} width={51} height={51} />
-                <Image className='sessioncontrol' src='/img/stop.png' alt='stop button' onClick={handleStop} width={51} height={51} />
+                <img className='sessioncontrol' src='/img/pause.png' alt='pause button' onClick={handlePause} />
+                <img className='sessioncontrol' src='/img/stop.png' alt='stop button' onClick={handleStop} />
             </div>  
         );
     } else {
         return(
             <div id='sessioncontrols'>
-                <Image className='sessioncontrol' src='/img/play.png' alt='play button' onClick={handlePlay} width={51} height={51} />
-                <Image className='sessioncontrol' src='/img/stop.png' alt='stop button' onClick={handleStop} width={51} height={51} />
+                <img className='sessioncontrol' src='/img/play.png' alt='play button' onClick={handlePlay} />
+                <img className='sessioncontrol' src='/img/stop.png' alt='stop button' onClick={handleStop} />
             </div>
         );
     }

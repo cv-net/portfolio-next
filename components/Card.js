@@ -3,6 +3,7 @@ import TimerInterface from './Timer';
 import TimeDisplay from './TimeDisplay';
 import SessionInput from './SessionInput';
 // import WorkJournal from './WorkJournal';
+import styles from './Card.module.scss';
 
 function Card() {
     const [ sessionTime, setSessionTime ] = useState(1500);
@@ -29,7 +30,7 @@ function Card() {
     
 
     return(
-        <>
+        <div className={styles.card}>
             < TimeDisplay display={timeDisplay} />
             < TimerInterface 
                 time={sessionTime} 
@@ -38,7 +39,7 @@ function Card() {
             />
             < SessionInput changeSessionTime={changeSessionTime} />
             {/* < WorkJournal />  */}
-        </>
+        </div>
     );
 }
 

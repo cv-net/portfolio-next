@@ -1,40 +1,46 @@
-import Image from 'next/image';
-import styled from 'styled-components';
+import React, { useEffect } from 'react';
 import Card from './Card';
 import { StaticRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import styles from './Bio.module.scss';
+import styled from 'styled-components';
 
-const ProjectStyle = styled.div`
-    border: 2px solid black;
-    padding: 1.5em;
-    border-radius: 15px;
-    img {
-        width: 100%;
+const TableauStyle = styled.div`       
+    .tableauPlaceholder {
+        position: relative;
+
+        img {
+            border: none;
+        }
     }
-    .bio {
-        width: 30%;
-        display: grid;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 1fr 1fr;
-    }
-    p {
-        font-family: serif, 'Footlight MT Light';
-    }
-    h4 {
-        letter-spacing: .1em;
+
+    .tableauViz {
+        display: none;
     }
 `
 
 
-
 export default function Bio() {
+    useEffect(() => {
+        const fig3 = document.createElement('script');
+        
+        fig3.src = "/fig3.js";
+        fig3.async = true;
+        
+        document.body.appendChild(fig3);
+        
+        return () => {
+            document.body.removeChild(fig3);
+        }
+}, []);
+
     return(
         <Router>
             <Switch>
         <div>
-            <div className='bio'>
+            <div className={styles.bio}>
             <div>
                 <h2>Khalil Abdellah</h2>
-                <p>khalil.mktg@gmail.com</p>
+                <p className='serif'>khalil.mktg@gmail.com</p>
                     <p>
                         I'm a recent graduate in Marketing from Temple University, 
                         building skills and looking for experience in UX, web development, and SEO. <br/>
@@ -42,28 +48,49 @@ export default function Bio() {
                     </p>
                     <p><a href='/resume621.pdf' target='_blank' rel='noreferrer'>Resume</a> | <a href='https://twitter.com/abdellica' target='_blank' rel='noreferrer'>Twitter</a></p>
             </div>
-            <div></div>
+
             </div>
-            <h3>Projects</h3>
+        <div className={styles.projects}>
+            <h2>Projects</h2>
             <hr />
-            <ProjectStyle>
-                <Link to='/datajournalism'><h4>Plastic Bag Props</h4></Link>
+            <div className={styles.projectcard} >
+                <Link to='/datajournalism'><h3 className='serif'>Plastic Bag Props</h3></Link>
                 <p>
                     Data visualization using Tableau and editorial. Data analysis using Python and Pandas.
                 </p>
                 <Link to='/datajournalism' >
-                    <Image src='/img/plastic_bag_props/fig.3.jpg' alt='Tableau data visualization by Khalil Abdellah' width={1833} height={731} />
+                    <TableauStyle>
+                    <div className='tableauPlaceholder' id='viz1622950425084'>
+                        <noscript>
+                            <a href='#'>
+                                <img alt='American Progressive Bag Alliance:Prop. 65&#39;s Supporting Committees and Contributions 2013-16 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Prop65sSupportingCommitteesandContributions&#47;Sheet1&#47;1_rss.png'/>
+                            </a>
+                        </noscript>
+                        <object className='tableauViz'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                            <param name='embed_code_version' value='3' /> 
+                            <param name='site_root' value='' />
+                            <param name='name' value='Prop65sSupportingCommitteesandContributions&#47;Sheet1' />
+                            <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Prop65sSupportingCommitteesandContributions&#47;Sheet1&#47;1.png' /> 
+                            <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' /><param name='language' value='en-US' />
+                        </object>
+                    </div>  
+                    </TableauStyle>
                 </Link>
 
-            </ProjectStyle>
+            </div>
             <hr />
-            <ProjectStyle>
-                <h4>React Journal Timer (WIP)</h4>
+            <div className={styles.projectcard}>
+                <h3 className='serif'>React Pomodoro Timer (WIP)</h3>
                 <p>
                     Productivity aid built with create-react-app framework, Hooks, and Styled Components.
                 </p>
                 <Card />
-            </ProjectStyle>
+            </div>
+        </div>
         </div>
         </Switch>
         </Router>

@@ -1,24 +1,9 @@
 import Head from 'next/head';
 import Header from './Header';
-import styled from 'styled-components';
-
-const LayoutStyle = styled.div`
-    .content {
-        margin: 0 auto;
-        width: 60%
-    }
-    .container {
-        display: flex;
-        flex-flow: row no-wrap;
-    }
-    .panel {
-        width: 20%
-    }
-`
 
 export default function Layout({title, keywords, description, children}) {
     return(
-        <LayoutStyle>
+        <>
             <Head>
                 <title>{title}</title>
                 <meta name='description' content={description} />
@@ -32,7 +17,7 @@ export default function Layout({title, keywords, description, children}) {
                 </div>
                 <div className='panel'></div>
             </div>
-        </LayoutStyle>
+        </>
     );
 }
 

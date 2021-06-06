@@ -1,5 +1,7 @@
 html,
 body {
+  /* background-image: url(/img/polkadots.svg);
+  background-repeat: no-repeat; */
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -20,6 +22,20 @@ a {
     height: 100%;
     margin: auto;
 } */
+
+h1, h3, h4 {
+  margin: 0em !important;
+}
+
+.serif {
+  letter-spacing: .1em;
+  font-family: serif, 'Footlight MT Light';
+}
+
+/* Images */
+.image-wrapper {
+  padding: 1em;
+}
 
 code {
   color: red;
@@ -46,11 +62,34 @@ body {
   background-color: #FFFFFC;
 }
 
+/* Page layout */
 .container {
+  display: flex;
+  flex-flow: row no-wrap;
   width: 100%;
   /* height: 100vh; */
   margin: auto;
 }
+
+.panel {
+  color: white;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  margin: 1em auto;
+}
+
+.flexer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* */
 
 h5 {
   display: inline;
@@ -68,34 +107,9 @@ h5 {
 }
 
 
-.bio > h2 {
-  font-family: serif, 'Footlight MT Light';
-}
-
-
-.header-ul {
-  list-style-type: none;
-  margin: 1.8em 0em 1em;
-  font-family: serif, 'Footlight MT Light';
-  letter-spacing: .2em;
-}
-
-.socials{
-  display: flex;
-  flex-flow: row no-wrap;
-  justify-content: center;
-  margin: auto;
-}
-
-.socials img {
-  height: 30px;
-  padding: .1em;
-  background-color: white;
-}
-
 /* Desktop screens */
 
-@media (min-width: 416px) {
+@media (min-width: 769px) {
   .panel {
       width: 25%;
       padding: 2em;

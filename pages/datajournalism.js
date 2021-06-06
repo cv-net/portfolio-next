@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import Layout from '../components/Layout';
+import React, { useEffect } from 'react';
 
 const PlasticBag = styled.div`
     @media (max-width: 415px) {
@@ -46,9 +47,37 @@ const PlasticBag = styled.div`
     li {
         padding-bottom: 1em;
     }
+    object {
+        display:none;
+    }
+    .tableauPlaceholder {
+        position: relative;
+        img {
+                border: none
+        }
+    }
 `
 
 function PlasticBagProps() {
+
+        useEffect(() => {
+                const fig2 = document.createElement('script');
+                // const fig3 = document.createElement('script');
+                
+                fig2.src = "/fig2.js";
+                fig2.async = true;
+                // fig3.src = "/fig3.js";
+                // fig3.async = true;
+                
+                document.body.appendChild(fig2);
+                // document.body.appendChild(fig3);
+                
+                return () => {
+                        document.body.removeChild(fig2);
+                        // document.body.removeChild(fig3);
+                }
+        }, []);
+
     return(
 <Layout>
     <PlasticBag>
@@ -118,15 +147,15 @@ function PlasticBagProps() {
     It immediately stuck out that the same 5 contributors that supported Proposition 65, opposed Proposition 67. 
     This was because the two propositions were listed together as the result of a successful petition in California courts.
             </div>
-            <Image src='/img/plastic_bag_props/fig.1.jpg' width={400} height={500} alt='Figure 1'/>
+            <img src='/img/plastic_bag_props/fig.1.jpg' alt='Figure 1'/>
             <p>Fig. 1, a screenshot from the Python notebook for this project. Available on Github after the jump.</p>
             <div className='paragraph APBApara'>
     These 5 companies contributed to the one committee sponsoring the proposition, the American Progressive Bag Alliance. Proposition 65's supporters were listed as opposition to Proposition 67.
     Proposition 65 didn't have any opposing contributions, probably because it wouldn't have been worth taking 
     focus away from Proposition 67.            
             </div>
-            {/* <Image src={figure7} className='APBA' alt='Logo for the American Progressive Bag Alliance'/> */}
-            <a href='https://public.tableau.com/views/Prop65sSupportingCommitteesandContributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'><Image src='/img/plastic_bag_props/fig.2.jpg' width={400} height={500} alt='Figure 2'/></a>
+            {/* <img src={figure7} className='APBA' alt='Logo for the American Progressive Bag Alliance'/> */}
+            <a href='https://public.tableau.com/views/Prop65sSupportingCommitteesandContributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'><img src='/img/plastic_bag_props/fig.2.jpg' alt='Figure 2'/></a>
             <p>Figure 2, available on <a href='https://public.tableau.com/views/Prop65sSupportingCommitteesandContributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'>Tableau Public.</a></p>
             <div className='paragraph'>
     Contributions supporting Prop. 65 averaged $99,311.60 (27 contributions) which is, on average, over 300x higher than those supporting Prop. 67.
@@ -151,7 +180,7 @@ function PlasticBagProps() {
     In spite of this, Proposition 67 had many small contributors, largely from California residents.
             </div>
             <h3>Prop. 67 - REFERENDUM TO OVERTURN BAN ON SINGLE-USE PLASTIC BAGS.</h3>
-            <a href='https://public.tableau.com/views/Prop67Contributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'><Image src='/img/plastic_bag_props/fig.3.jpg' width={400} height={500} alt='Figure 3'/></a>
+            <a href='https://public.tableau.com/views/Prop67Contributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'><img src='/img/plastic_bag_props/fig.3.jpg' alt='Figure 3'/></a>
             <p>Figure 3, available on <a href='https://public.tableau.com/views/Prop67Contributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'>Tableau Public</a></p>
             <ul>
                 <li>
@@ -161,7 +190,7 @@ function PlasticBagProps() {
                     Average contribution of $286.17
                 </li>
             </ul>
-            <Image src='/img/plastic_bag_props/fig.4.jpg' width={400} height={500} alt='Figure 4'/>
+            <img src='/img/plastic_bag_props/fig.4.jpg' alt='Figure 4'/>
             <p>
                 Figure 4, from <a href='https://github.com/mourtallah/CA-Ballot-Props' target='_blank' rel="noreferrer">Money in Politics : An Analysis of 2016 California Ballot Propositions Contributions 
                 by Serigne Mourtallah M'backe Faye, 2021</a> 
@@ -170,7 +199,7 @@ function PlasticBagProps() {
     When looking at all the California ballot propositions in 2016, Prop. 67 was on the higher end 
     with 6,000+ contributors, as opposed to Prop. 65's five contributors.
             </div>
-            <Image src='/img/plastic_bag_props/fig.5.jpg' width={400} height={500} alt='Figure 5'/>
+            <img src='/img/plastic_bag_props/fig.5.jpg' alt='Figure 5'/>
             <p>Figure 5, a screenshot from the Python notebook for the project, available on Github.</p>
             <div className='paragraph'>
     Prop. 67 raised only about 2/3 of what Prop. 65 raised, which was largely done by the four plastics producers.
@@ -179,7 +208,7 @@ function PlasticBagProps() {
             <div className='paragraph'>
     We find the fine print of Proposition 65, something that makes a little more sense for a plastic bag company to support, on <a href='https://ballotpedia.org/California_Proposition_65,_Dedication_of_Revenue_from_Disposable_Bag_Sales_to_Wildlife_Conservation_Fund_(2016)' target='_blank' rel="noreferrer">Ballotpedia</a>.
             </div>
-            <Image src='/img/plastic_bag_props/fig.6.jpg' width={400} height={500} alt='Figure 6'/>
+            <img src='/img/plastic_bag_props/fig.6.jpg' alt='Figure 6'/>
             <p>Figure 6, from Ballotpedia.</p>
             <div className='paragraph'>
     Prop. 65 would have only succeeded in its surface aims if it both props won, and 65 succeeded with a 
@@ -250,13 +279,13 @@ function PlasticBagProps() {
                 </li>
         </ul>
         </div>
-        {/* <div class='tableauPlaceholder' id='viz1621453079925' style='position: relative'>
+        <div class='tableauPlaceholder' id='viz1621453079925' >
                 <noscript>
                         <a href='#'>
-                                <Image alt='Prop. 67 Contribution Amounts:Portion of total data ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Prop67Contributions&#47;Sheet1&#47;1_rss.png' style='border: none' />
+                                <img alt='Prop. 67 Contribution Amounts:Portion of total data ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Prop67Contributions&#47;Sheet1&#47;1_rss.png' />
                         </a>
                 </noscript>
-                <object class='tableauViz'  style='display:none;'>
+                <object class='tableauViz' >
                         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
                         <param name='embed_code_version' value='3' /> 
                         <param name='site_root' value='' />
@@ -272,14 +301,7 @@ function PlasticBagProps() {
                         <param name='language' value='en' />
                 </object>
         </div>                
-        <script type='text/javascript'>
-                var divElement = document.getElementById('viz1621453079925');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
-                var scriptElement = document.createElement('script');                    
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);                        
-        </script> */}
+
         </PlasticBag>
         </Layout>
 

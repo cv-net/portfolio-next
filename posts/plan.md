@@ -1,18 +1,17 @@
 ## Portfolio site
 - [x] Deploy
   - [Vercel](https://portfolio-five-pink.vercel.app)
+- [ ] Image CSS
+  - [x] Wrap images with classed divs for css
 - [ ] Mobile-first CSS
   - [ ] blog on it - document process
 - [ ] Weather data API
-- [ ] Add favicon
-- [ ] [Header on blog pages](https://www.youtube.com/watch?v=pY0vWYLDDco)
+- [x] Add favicon
+- [x] [Header on blog pages](https://www.youtube.com/watch?v=pY0vWYLDDco)
 - [ ] Miller columns
-- [ ] Mobile layout for blogs
 
 - [ ] **Social Media posts page** 
   - [ ] Indie-Life posts
-
-
 
 - [ ] **Plastic Bag Props**
   - [ ] JSX Article in first column, Markdown in the second
@@ -22,6 +21,8 @@
   - [x] line breaks css
   - [ ] callout css
   - [ ] Github embed at top css and img
+
+- [ ] Miller columns (integrate projects and code blog)
   
 ## more Portfolio Projects
 - [ ] Finish react journal timer
