@@ -3,8 +3,9 @@
   - [Vercel](https://portfolio-five-pink.vercel.app)
 - [ ] Image CSS
   - [x] Wrap images with classed divs for css
-- [ ] Mobile-first CSS
+- [x] Mobile-first CSS
   - [ ] blog on it - document process
+    - [x] draft blog points
 - [ ] Weather data API
 - [x] Add favicon
 - [x] [Header on blog pages](https://www.youtube.com/watch?v=pY0vWYLDDco)

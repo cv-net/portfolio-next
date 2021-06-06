@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Header.module.scss';
 import { StaticRouter as Router, Route, Switch} from 'react-router-dom';
-import Image from 'next/image';
-
 
 export default function Header({url, temp}) {
 

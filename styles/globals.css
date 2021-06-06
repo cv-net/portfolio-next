@@ -123,9 +123,6 @@ h5 {
       display: flex;
       flex-flow: row nowrap;
   }
-  .spacer {
-      width: 15%;
-  }
   
   .toolbar {
       text-align: center;

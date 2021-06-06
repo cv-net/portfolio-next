@@ -43,8 +43,8 @@ export default function Bio() {
                 <p className='serif'>khalil.mktg@gmail.com</p>
                     <p>
                         I'm a recent graduate in Marketing from Temple University, 
-                        building skills and looking for experience in UX, web development, and SEO. <br/>
-                        My biggest interest now is using UX for journalism, or communication design.
+                        building skills and looking for experience in UX, web development, and SEO. This site was built using Next.js and React Hooks. <br/><br/>
+                        My biggest interest now is using UX design principles for journalism, communication design, and accessible tools that aid learning in all stages of life.
                     </p>
                     <p><a href='/resume621.pdf' target='_blank' rel='noreferrer'>Resume</a> | <a href='https://twitter.com/abdellica' target='_blank' rel='noreferrer'>Twitter</a></p>
             </div>
