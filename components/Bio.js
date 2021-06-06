@@ -63,7 +63,7 @@ export default function Bio() {
             <div className={styles.projectcard} >
                 <Link to='/datajournalism'><h3 className='serif'>Plastic Bag Props</h3></Link>
                 <p>
-                    Data visualization using Tableau, with editorial. Data analysis using Python and Pandas. Click for article.
+                    Data visualization using Tableau, with editorial. Data analysis using Python and Pandas. <Link to='/datajournalism'>Click for article.</Link>
                 </p>
                 <Link to='/datajournalism' >
                     <TableauStyle>
