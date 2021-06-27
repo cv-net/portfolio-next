@@ -25,6 +25,13 @@ const TableauStyle = styled.div`
     }
 `
 
+const FigmaStyle = styled.div`
+    .iframe {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+`
+
 
 export default function Bio() {
     useEffect(() => {
@@ -97,6 +104,13 @@ export default function Bio() {
                 </p>
                 <Card />
             </div>
+            <hr />
+            <div className={styles.projectcard}>
+                <h3 className='serif'>Figma UI Prototype</h3>
+                <p>Mock Human Resources dashboard for a wellness app for mobile and web. Click 'Khalil Abdellah' in the list to move forward in the prototype. Click the dropdown to reveal more info, and the back button to go back to the top.</p>
+                <FigmaStyle><iframe className='iframe' width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FITLy2reBt5kvUJuadEkfZR%2FAWeber-Assessment-Acme-Corp.-Wellness-App%3Fpage-id%3D0%253A1%26node-id%3D31%253A231%26viewport%3D477%252C283%252C0.13850635290145874%26scaling%3Dcontain" allowfullscreen></iframe></FigmaStyle>
+            </div>
+            <hr/>
         </div>
         </div>
         </Switch>

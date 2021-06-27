@@ -3,11 +3,22 @@ import Link from 'next/link';
 import styles from './Header.module.scss';
 import { StaticRouter as Router, Route, Switch} from 'react-router-dom';
 
-export default function Header({url, temp}) {
+// export const getStaticProps = async () => {
+//     const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Philadelphia&units=imperial&appid=${process.env.WEATHER_KEY}`);
 
+//     return {
+//         props: {
+//             url: `https://openweathermap.org/img/w/${res.data.weather[0].icon}.png`,
+//             temp: parseInt(res.data.main.temp),
+//             hello: 'hello'
+//         },
+//     }
+// }
+
+export default function Header() {
+    // console.log(url, temp, hello);
     return(
         <Router>
-            <Switch>
         <div className={styles.spacers}>
             <div className='spacer'></div>
         <div className={styles.header}>
@@ -41,26 +52,9 @@ export default function Header({url, temp}) {
         </div>
             <div className='spacer'></div>
         </div>
-            </Switch>
+
         </Router>
 
     );
 }
 
-// export async function getStaticProps() {
-//     try {
-//         const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Philadelphia&units=imperial&appid=${keys.openweatherdata}`);
-//         let url = `https://openweathermap.org/img/w/${res.data.weather[0].icon}.png`;
-//         let temp = parseInt(res.data.main.temp)
-        
-//         return {
-//             props: {
-//                 url,
-//                 temp
-//             },
-//         }
-
-//     } catch (err) {
-//         console.log(err);
-//     }
-// }
