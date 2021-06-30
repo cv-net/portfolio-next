@@ -11,13 +11,27 @@ const PlasticBag = styled.div`
     display: grid;
 
     img {
-        width: 100%;
+        width: 70%;
+        object-fit: fill;
+        height: 7=100%;
     }
     .APBA {
         float: right;
         height: 100%;
         width: 10%;
         display: inline;
+    }
+
+//     .img-container {
+//         height: 50vh;
+//     }
+
+    p {
+        line-height: 200%;
+    }
+
+    h3 {
+        padding-bottom: .5em;
     }
 
     h4 {
@@ -32,6 +46,7 @@ const PlasticBag = styled.div`
     }
     .paragraph {
         padding-bottom: 1em;
+        line-height: 150%;
     }
     .APBApara {
         width: 60%;
@@ -41,7 +56,7 @@ const PlasticBag = styled.div`
         padding: 1.5em;
         margin-bottom: 1em;
         border-radius: 5%;
-
+        line-height: 170%;
     }
     .citations {}
     li {
@@ -60,23 +75,23 @@ const PlasticBag = styled.div`
 
 function PlasticBagProps() {
 
-        useEffect(() => {
-                const fig2 = document.createElement('script');
-                // const fig3 = document.createElement('script');
+        // useEffect(() => {
+        //         const fig2 = document.createElement('script');
+        //         // const fig3 = document.createElement('script');
                 
-                fig2.src = "/fig2.js";
-                fig2.async = true;
-                // fig3.src = "/fig3.js";
-                // fig3.async = true;
+        //         fig2.src = "/fig2.js";
+        //         fig2.async = true;
+        //         // fig3.src = "/fig3.js";
+        //         // fig3.async = true;
                 
-                document.body.appendChild(fig2);
-                // document.body.appendChild(fig3);
+        //         document.body.appendChild(fig2);
+        //         // document.body.appendChild(fig3);
                 
-                return () => {
-                        document.body.removeChild(fig2);
-                        // document.body.removeChild(fig3);
-                }
-        }, []);
+        //         return () => {
+        //                 document.body.removeChild(fig2);
+        //                 // document.body.removeChild(fig3);
+        //         }
+        // }, []);
 
     return(
 <Layout>
@@ -155,7 +170,8 @@ function PlasticBagProps() {
     focus away from Proposition 67.            
             </div>
             {/* <img src={figure7} className='APBA' alt='Logo for the American Progressive Bag Alliance'/> */}
-            <a href='https://public.tableau.com/views/Prop65sSupportingCommitteesandContributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'><img src='/img/plastic_bag_props/fig.2.jpg' alt='Figure 2'/></a>
+            <a href='https://public.tableau.com/views/Prop65sSupportingCommitteesandContributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'>
+                    <img src='/img/plastic_bag_props/fig.2.jpg' alt='Figure 2'/></a>
             <p>Figure 2, available on <a href='https://public.tableau.com/views/Prop65sSupportingCommitteesandContributions/Sheet1?:language=en&:display_count=y&:origin=viz_share_link'>Tableau Public.</a></p>
             <div className='paragraph'>
     Contributions supporting Prop. 65 averaged $99,311.60 (27 contributions) which is, on average, over 300x higher than those supporting Prop. 67.
@@ -208,7 +224,7 @@ function PlasticBagProps() {
             <div className='paragraph'>
     We find the fine print of Proposition 65, something that makes a little more sense for a plastic bag company to support, on <a href='https://ballotpedia.org/California_Proposition_65,_Dedication_of_Revenue_from_Disposable_Bag_Sales_to_Wildlife_Conservation_Fund_(2016)' target='_blank' rel="noreferrer">Ballotpedia</a>.
             </div>
-            <img src='/img/plastic_bag_props/fig.6.jpg' alt='Figure 6'/>
+            <div className='img-container'><img src='/img/plastic_bag_props/fig.6.jpg' alt='Figure 6'/></div>
             <p>Figure 6, from Ballotpedia.</p>
             <div className='paragraph'>
     Prop. 65 would have only succeeded in its surface aims if it both props won, and 65 succeeded with a 
@@ -279,7 +295,7 @@ function PlasticBagProps() {
                 </li>
         </ul>
         </div>
-        <div class='tableauPlaceholder' id='viz1621453079925' >
+        {/* <div class='tableauPlaceholder' id='viz1621453079925' >
                 <noscript>
                         <a href='#'>
                                 <img alt='Prop. 67 Contribution Amounts:Portion of total data ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Prop67Contributions&#47;Sheet1&#47;1_rss.png' />
@@ -300,7 +316,7 @@ function PlasticBagProps() {
                         <param name='display_count' value='yes' />
                         <param name='language' value='en' />
                 </object>
-        </div>                
+        </div>                 */}
 
         </PlasticBag>
         </Layout>
